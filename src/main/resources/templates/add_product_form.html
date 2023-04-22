@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add new product</h1>
+<form th:action="@{/products/add}" th:object="${product}">
+    <input type="hidden" th:field="${product.productId}">
+    <input type="text" th:field="${product.productName}" placeholder="Product name">
+    <input type="text" th:field="${product.description}" placeholder="Product description">
+    <input type="text" th:field="${product.image}" placeholder="Product image">
+    <input type="text" th:field="${product.manufacturer}" placeholder="Product manufacturer">
+    <input type="number" th:field="${product.status}" placeholder="Product status">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

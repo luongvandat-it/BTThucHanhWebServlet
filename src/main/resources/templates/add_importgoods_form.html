@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add new importgood</h1>
+<form th:action="@{/importgoods/add}" th:object="${importgoods}">
+    <input type="hidden" th:field="${importgoods.importGoodsId}">
+    <input type="text" th:field="${importgoods.employeeName}" placeholder="Employee name">
+    <input type="date" id="importDate" placeholder="Import date">
+    <input type="text" th:field="${importgoods.manufacturerName}" placeholder="Manufacturer name">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

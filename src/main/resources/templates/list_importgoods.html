@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of importgoods</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Empl Name</th>
+        <th>Import date</th>
+        <th>Manu name</th>
+    </tr>
+    </thead>
+    <tbody>
+<tr th:each="importgoods:${importgoods}">
+    <td th:text="${importgoods.importGoodsId}"></td>
+    <td th:text="${importgoods.employeeName}"></td>
+    <td th:text="${importgoods.importDate}"></td>
+    <td th:text="${importgoods.manufacturerName}"></td>
+</tr>
+</tbody>
+</table>
+<a th:href="@{/importgoods/showImportGoodsForm}" >Add new import goods</a>
+</body>
+</html>

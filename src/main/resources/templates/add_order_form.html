@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add new order</h1>
+<form th:action="@{/orders/add}" th:object="${order}">
+    <input type="hidden" th:field="${order.orderId}">
+    <input type="text" th:field="${order.address}" placeholder="Order address">
+    <input type="text" th:field="${order.employeeName}" placeholder="Order empl name">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
